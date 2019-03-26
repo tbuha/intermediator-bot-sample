@@ -113,7 +113,7 @@ namespace IntermediatorBotSample.Middleware
 
                     // Let the message router route the activity, if the sender is connected with
                     // another user/bot
-                    messageRouterResult = await MessageRouter.RouteMessageIfSenderIsConnectedAsync(activity);
+                    messageRouterResult = await MessageRouter.RouteReachMessageIfSenderIsConnectedAsync(activity);
 
                     if (messageRouterResult is MessageRoutingResult
                         && (messageRouterResult as MessageRoutingResult).Type == MessageRoutingResultType.NoActionTaken)
